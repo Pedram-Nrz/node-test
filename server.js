@@ -1,7 +1,10 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 2000;
 var app = express();
+
+
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
@@ -54,6 +57,6 @@ app.get('/about', (req, res) =>{
     });
 });
 
-app.listen(2000, () => {
-    console.log('Express started');
+app.listen(port, () => {
+    console.log(`Express started on port ${port}`);
 });
