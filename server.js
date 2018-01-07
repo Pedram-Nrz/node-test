@@ -57,6 +57,13 @@ app.get('/about', (req, res) =>{
     });
 });
 
+app.get('/contact', (req, res) =>{
+    res.render('contact.hbs',{
+        pageTitle: 'Contact Page',
+        pmessage: 'Here is my phone number:'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Express started on port ${port}`);
 });
