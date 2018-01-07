@@ -60,7 +60,8 @@ app.get('/about', (req, res) =>{
 app.get('/contact', (req, res) =>{
     res.render('contact.hbs',{
         pageTitle: 'Contact Page',
-        pmessage: 'Here is my phone number:'
+        pmessage: 'Here is my phone number:',
+        number: '09398795465'
     });
 });
 
